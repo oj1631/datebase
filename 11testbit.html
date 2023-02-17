@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>11testavg.html</title>
+<style>
+    *{font-size: 20pt;}
+</style>
+
+<script>
+   function mybit(){
+    const PI=3.1415; //상수
+    const SM='박진영'; //상수
+    const NT='대한민국'; //상수
+    document.write(PI, '<br>');
+    //PI=7.8; //상수에 값을 다시 할당=대입
+    //document.write(PI); //출력
+
+     
+
+    //PI=7.8; 재할당하지마세요
+    //321페이지 데이터-primitive(숫자,문자,불)/object(배열)
+    //322페이지 escape문자 \n \t \'
+    var temp2; //값 정의 안됨
+    document.write(temp2); //undefined 
+
+    var a=3, b=5, hap=0, gob=0, nmg=0;//산술연산
+    hap = a+b;
+    gob= a*b;
+    nmg= a%b;
+
+    //비트연산
+    var bit1 = a & b ; //양쪽참=1일때
+    var bit2 = a | b ; //양쪽중에 하나=1일때
+    document.write(bit1, '<br>'); //1
+    document.write(bit2, '<br>'); //7
+    document.write(gob, '<br>');
+
+   }//end
+</script>
+</head>
+<body>
+    <div id="display1">
+       
+    </div>
+
+    <h2> 11testavg.html </h2>
+    <button onclick="mybit()">비트연산</button>
+    <div id="display"></div>
+</body>
+</html>

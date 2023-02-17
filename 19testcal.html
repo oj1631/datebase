@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>19testcal.html</title>
+    
+<style>
+ .bu{
+    font-size: 20pt;
+    margin-top: 20px;
+    width: 200px;
+    height: 60px;
+    border-radius: 10px;
+    cursor: pointer;
+   
+ }   
+ #sq{
+    margin-top: 30px;
+ }
+</style>    
+
+<script>
+    function mycal(){
+      
+        var moo = document.myform.sul.value;
+        var ct1  = document.myform.num1.value;
+        var anju = document.myform.an.value;
+        var ct2  = document.myform.num2.value;
+
+        if(moo=='콜라'){price1=5000;}
+        else if(moo=='소주'){price1=3000;}
+        else if(moo=='맥주'){price1=3000;}
+
+        if(anju=='제육볶음'){price2=8000;}
+        else if(anju=='두부김치'){price2=10000;}
+        else if(anju=='골뱅무침'){price2=7000;}
+        else if(anju=='김치파전'){price2=5000;}
+
+    
+        var suju = parseInt(price1) * ct1 ; 
+        var food = parseInt(price2) * ct2 ;
+        var total = suju + food ;
+
+        var result = 
+        '음료: ' + moo 
+        + '\n'+ '갯수: ' + ct1
+        + '\n'+ '합계: ' + suju
+        + '\n'+'\n'
+        +'안주: ' + anju
+        + '\n'+ '갯수: ' + ct2
+        + '\n'+ '합계: ' + food
+        + '\n'+ '\n'
+        +'총합계: ' + total;
+
+        document.getElementById('sq').innerHTML=result;
+                    
+    }
+</script>
+</head>
+<body>
+    <!-- 소주(3000원) 맥주(2000원) 콜라(5000원) -->
+    <!-- 제육볶음(8000원) 두부김치(10000원) 골뱅무침(7000원) 김치파전(5000원) -->
+    <h1><font color = 'green'> [쪼끼쪼끼 주문표] </font></h1>
+    <form name="myform">
+        <table border="0">
+            <tr>
+                <th width="80">술종류</th>
+                <th width="50">갯수</th>
+                <th width="80">안주종류</th>
+                <th width="80">갯수</th>
+            </tr>
+            <tr>
+                <td><select name="sul" id="sul" >
+                    <option value="콜라">콜라(5000원)</option>
+                    <option value="소주">소주(3000원)</option>
+                    <option value="맥주">맥주(2000원)</option>
+                    </select>
+                </td>
+                <td>
+                    <input type="text" name="num1" id="">
+                </td>
+                <td>
+                    <select name="an" id="an">
+                        <option value="제육볶음">제육볶음(8000원)</option>
+                        <option value="두부김치">두부김치(10000원)</option>
+                        <option value="골뱅무침">골뱅무침(7000원)</option>
+                        <option value="김치파전">김치파전(5000원)</option>
+                    </select>
+                </td>
+                <td>
+                    <input type="text" name="num2" id="">
+                </td>
+            </tr>
+        </table>
+        <div class="order">
+            <input type="button" onclick="mycal()" class="bu" value="주 문 확 인">
+        </div>
+        
+        <div>
+            <textarea name="" id="sq" cols="90" rows="20"></textarea>
+        </div>
+    </form>
+    <div>
+
+    </div>
+</body>
+</html>
